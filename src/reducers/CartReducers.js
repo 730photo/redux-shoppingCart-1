@@ -1,8 +1,8 @@
-export default(state = [], action) => {
-    switch(action.type){
+export default (state = [], action) => {
+  switch (action.type) {
       case 'ADD_ITEM':
-        return [...state, action.item]
+          return [...state, action.item]
       default:
-        return state
-    }
+          return state
   }
+}

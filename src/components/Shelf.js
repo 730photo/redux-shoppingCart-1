@@ -1,33 +1,36 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
 class Shelf extends Component {
-state = {
-    shelfItems: [
-        "Bananas",
-        "Frozen Pizza",
-        "Flamin' Hot Cheetos",
-        "Arugula"
-      ]
+    state = {
+        shelfItems: [
+            "Bananas",
+            "Oranges",
+            "Granola",
+            "Apple Slices",
+            "Orange Juice",
+            "Frozen Peaches"
+        ]
     }
 
-  render() {
-      const shelfItems = this.state.shelfItems.map((item, id)=> {
-          return (
-              <li key={id}>
+
+    render() {
+        const shelfItems = this.state.shelfItems.map((item, id) => {
+            return (
+                <li key={id}>
                     {item}
                     <button onClick={() => this.props.addItem(item)}>+</button>
-              </li>
-          )
-      })
-    return (
-      <div>
-          <h2>Store Inventory</h2>
-          <ul>
-              {shelfItems}
-          </ul>
-      </div>
-    )
-  }
+                </li>
+            )
+        })
+        return (
+            <div>
+                <h2>Store Inventory</h2>
+                <ul>
+                    {shelfItems}
+                </ul>
+            </div>
+        )
+    }
 }
 
 export default Shelf

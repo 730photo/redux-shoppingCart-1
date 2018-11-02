@@ -6,9 +6,10 @@ import * as CartActions from '../actions/CartActions'
 import Shelf from '../components/Shelf'
 
  class Cart extends Component {
-    state = {
-
-    }
+    constructor(props){
+        super(props)
+        this.state = {}
+      }
 
     render() {
         const CartItems = this.props.cart.map((item, id) => {
